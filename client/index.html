@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vezun | WebRTC Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>VEZUN</h1>
+    <p class="subtitle">Real-time communication lab</p>
+
+    <section class="status-panel">
+      <p>Server: <span id="server-status">Disconnected</span></p>
+      <p>Camera: <span id="camera-status">Not started</span></p>
+    </section>
+
+    <section class="video-container">
+      <video id="local-video" autoplay muted playsinline></video>
+      <div class="video-label">You</div>
+    </section>
+
+    <div class="controls">
+      <button id="start-camera">Start Camera</button>
+      <button id="stop-camera" disabled>Stop Camera</button>
+    </div>
+
+    <p id="message">Waiting for connection...</p>
+  </main>
+
+  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+  <script src="js/media.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
